@@ -1,0 +1,203 @@
+/* General styles for all menus */
+.cbp-spmenu {
+	background: #47a3da;
+	position: fixed;
+}
+
+.cbp-spmenu h3 {
+	color: #afdefa;
+	font-size: 1.9em;
+	padding: 20px;
+	margin: 0;
+	font-weight: 300;
+	background: #0d77b6;
+}
+
+.cbp-spmenu a {
+	display: block;
+	color: #fff;
+	font-size: 1.1em;
+	font-weight: 300;
+}
+
+.cbp-spmenu a:hover {
+	background: #258ecd;
+}
+
+.cbp-spmenu a:active {
+	background: #afdefa;
+	color: #47a3da;
+}
+
+.cbp-spmenu .close {
+	vertical-align: middle;
+	cursor: pointer;
+	float:right;
+	display:block;
+	width: 32px;
+	height: 32px;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADJElEQVRYR81X7XHTQBB9q7HET0wFWE4BSSrAqQCfGyBUgKkgSQdOBUADkakAp4KYAhKbDsxPpIyW2ZNOOtl3spIMY+6ndHf79u3HvSU8YSWrxzHy/D0IAwB9ACfl8SWADRhrDoL5JO5973ot7duYrHiAPLsAYVwa3XdE/guYOYLws4pp03agFUBy/+cSRJ98hhm4lcsJeOcxsgHRTMXhlQ+EE0Cy4j44+2FRDGb8JsIcFMxV3Ju7LtQh4nzMjDERXlt7lqDwzMXGDoBklZ6AIcYlxsVivkIQzfbRabZrB/J0CqILC8QGhDMVR5Iv1WoAKD1fGeMM/kVE4+1DXZJA9ogzzDwn0NvyzAYUxrYjFYBt2hn4SRSOunrtAyX3MmcLAo5NxahhdGr21wCKhNOUFZ5HJy81boeEOV1WTDBfqaNXl2UCC1U8AGd3VdwJp8+l3c+Ezi2xUZRpGQrNQPKQfgXwwSScQdc11l33JffpDAQpa1nf1DA61wBu7tONlI0utSAc+KjXTOFxoOJw4TKarLIR0FurmNbu/9znPFuXJbpRw+gNlbWb2Kg8h+swET6qOBLWqpWs0nMwvpT0nnpB2GxToKhBPwXK32SyEZilPxTLAmEZN/+8OdRwmHFNNw+plIhupWoYtbfm2ssKRJE32vMdYL7cSB5SLo7hVgAsTY3uAyCHdry1rThC4wxnCQDAUkJQoZkMo5EPtSfe9eeOxnXSW6wfCkDF+kFDoNv9wZPw4GX4lEbEebbUXaylEZXdVB4ydzfcbkQ6K8tWbD8S3m74wlYMzrTeEKCTo6j/fzxGWjTUj4S02X/6HNuPnlOQALwGRfKgtErqLk2r6J4ictM7gGSe0BqzIUjMRXZbljbpU7JdDdfGa4UttT8ZRmagEUlfr51QaCZIPVcdFQqbE+O5S284ZTnnWDR0PdEl0LvuGpJClutpamrcK4xj1CrLzWaHkpVfetxqm/2s2bExxrUp7L2jGYOmW1OOHTUjzZyvqPYaPGvTmF2GUxnTZo5xy5uL9RgXTveFbS+AZpKWsx+K8dwIGaFYQkSMJYJg4ZN1LsR/AWNNKGPB6v5CAAAAAElFTkSuQmCC');
+}
+
+/* Orientation-dependent styles for the content of the menu */
+
+.cbp-spmenu-vertical {
+	width: 240px;
+	height: 100%;
+	top: 0;
+	z-index: 1000;
+}
+
+.cbp-spmenu-vertical a {
+	border-bottom: 1px solid #258ecd;
+	padding: 1em;
+}
+
+.cbp-spmenu-horizontal {
+	width: 100%;
+	height: 150px;
+	left: 0;
+	z-index: 1000;
+	overflow: hidden;
+}
+
+.cbp-spmenu-horizontal h3 {
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+
+.cbp-spmenu-horizontal a {
+	float: left;
+	width: 20%;
+	padding: 0.8em;
+	border-left: 1px solid #258ecd;
+}
+
+/* Vertical menu that slides from the left or right */
+
+.cbp-spmenu-left {
+	left: -240px;
+}
+
+.cbp-spmenu-right {
+	right: -240px;
+}
+
+.cbp-spmenu-left.cbp-spmenu-open {
+	left: 0px;
+}
+
+.cbp-spmenu-right.cbp-spmenu-open {
+	right: 0px;
+}
+
+/* Horizontal menu that slides from the top or bottom */
+
+.cbp-spmenu-top {
+	top: -150px;
+}
+
+.cbp-spmenu-bottom {
+	bottom: -150px;
+}
+
+.cbp-spmenu-top.cbp-spmenu-open {
+	top: 0px;
+}
+
+.cbp-spmenu-bottom.cbp-spmenu-open {
+	bottom: 0px;
+}
+
+/* Push classes applied to the body */
+
+.cbp-spmenu-push {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+
+.cbp-spmenu-push-toright {
+	left: 240px;
+}
+
+.cbp-spmenu-push-toleft {
+	left: -240px;
+}
+
+/* dimmer */
+
+.dimming {
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	position: fixed;
+	opacity: 0;
+	left: 0;
+	top: 0;
+	-webkit-transition: width 0s, height 0s, opacity 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: width 0s, height 0s, opacity 0.3s ease;
+}
+
+.dimming.nd {
+	width: 0;
+	height: 0;
+}
+
+.dimming.open {
+	opacity: 0.7;
+	-webkit-transition: width 0s, height 0s, opacity 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: width 0s, height 0s, opacity 0.3s ease;
+}
+
+/* Transitions */
+
+.cbp-spmenu,
+.cbp-spmenu-push {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+/* Example media queries */
+
+@media screen and (max-width: 55.1875em){
+
+	.cbp-spmenu-horizontal {
+		font-size: 75%;
+		height: 110px;
+	}
+
+	.cbp-spmenu-top {
+		top: -110px;
+	}
+
+	.cbp-spmenu-bottom {
+		bottom: -110px;
+	}
+
+}
+
+@media screen and (max-height: 26.375em){
+
+	.cbp-spmenu-vertical {
+		font-size: 90%;
+		width: 190px;
+	}
+
+	.cbp-spmenu-left,
+	.cbp-spmenu-push-toleft {
+		left: -190px;
+	}
+
+	.cbp-spmenu-right {
+		right: -190px;
+	}
+
+	.cbp-spmenu-push-toright {
+		left: 190px;
+	}
+}

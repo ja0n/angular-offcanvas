@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" ng-app="ng-aside">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular.min.js"></script>
+    <script src="js/module.js"></script>
+	</head>
+	<body class="cbp-spmenu-push">
+		<ng-aside id="menu1" side="left">
+			<h3>Menu Left <span class="close" ng-aside-close="menu1"></span></h3>
+
+			<a href="#">jamonstro</a>
+			<a href="#">Dulse daikon</a>
+		</ng-aside>
+		<ng-aside id="menu2" side="right">
+			<h3>Menu Right</h3>
+			<a href="#">jamonstro</a>
+			<a href="#">Dulse daikon</a>
+		</ng-aside>
+		<ng-aside id="menu3" side="bottom">
+			<h3>Menu Bottom</h3>
+			<a href="#">jamonstro</a>
+			<a href="#">Dulse daikon</a>
+			<a href="#">jamonstro</a>
+			<a href="#">Dulse daikon</a>
+		</ng-aside>
+		<ng-aside id="menu4" side="top">
+			<h3>Menu Top</h3>
+			<a href="#">jamonstro</a>
+			<a href="#">Dulse daikon</a>
+			<a href="#">jamonstro</a>
+			<a href="#">Dulse daikon</a>
+		</ng-aside>
+		<div class="container">
+			<div class="main">
+				<section>
+					<h2>Slide Menus</h2>
+					<!-- Class "cbp-spmenu-open" gets applied to menu -->
+					<button class="btn" ng-aside-slide="menu1">Menu Left</button>
+					<button class="btn" ng-aside-slide="menu1" dimmer="true">Menu Left (dimmer)</button>
+					<button class="btn" ng-aside-slide="menu1" lock="true">Menu Left (lock)</button>
+					<button class="btn" ng-aside-slide="menu2">Menu Right</button>
+					<button class="btn" ng-aside-slide="menu3">Menu Bottom</button>
+					<button class="btn" ng-aside-slide="menu3" dimmer="true">Menu Bottom (dimmer)</button>
+					<button class="btn" ng-aside-slide="menu4">Menu Top</button>
+				</section>
+				<section class="buttonset">
+					<h2>Push Menus</h2>
+					<button class="btn" ng-aside-push="menu1">Menu Left</button>
+					<button class="btn" ng-aside-push="menu1" dimmer="true">Menu Left (dimmer)</button>
+					<button class="btn" ng-aside-push="menu2">Menu Right</button>
+				</section>
+			</div>
+		</div>
+	</body>
+</html>
